@@ -1,0 +1,19 @@
+﻿<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="cocina" namespace="cocina">
+	<class name="Platera" table="platera">
+		<id name="Id" column="id" type="int">
+			<generator class="native" />
+		</id>
+		<property name="Izena" column="izena" type="string" />
+		<property name="Deskribapena" column="deskribapena" type="string" />
+		<property name="Kategoria" column="kategoria" type="string" />
+		<!-- Cambiado de "mota" a "kategoria" -->
+		<property name="Prezioa" column="prezioa" type="double" />
+		<property name="Menu" column="menu" type="bool" />
+		<property name="CreatedAt" column="createdAt" type="datetime" />
+		<property name="CreatedBy" column="createdBy" type="int" />
+		<property name="UpdatedAt" column="updatedAt" type="datetime" />
+		<property name="UpdatedBy" column="updatedBy" type="int" />
+		<property name="DeletedAt" column="deletedAt" type="datetime" />
+		<property name="DeletedBy" column="deletedBy" type="int" />
+	</class>
+</hibernate-mapping>
