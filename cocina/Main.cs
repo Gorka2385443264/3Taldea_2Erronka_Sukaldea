@@ -40,7 +40,7 @@ namespace cocina
         private void InitializeTimer()
         {
             updateTimer = new Timer();
-            updateTimer.Interval = 10000; // Intervalo de 10 segundos
+            updateTimer.Interval = 1000; // Intervalo de 10 segundos
             updateTimer.Tick += UpdateTimer_Tick;
             updateTimer.Start();
         }
