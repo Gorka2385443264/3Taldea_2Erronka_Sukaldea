@@ -20,9 +20,9 @@ namespace cocina
         private BindingSource bindingSource = new BindingSource();
 
         // Colores de la app
-        private readonly Color primaryColor = ColorTranslator.FromHtml("#091725");
-        private readonly Color secondaryColor = ColorTranslator.FromHtml("#BA450D");
-        private readonly Color accentColor = ColorTranslator.FromHtml("#ececec");
+        private readonly Color primaryColor = ColorTranslator.FromHtml("#F6F0E4");
+        private readonly Color secondaryColor = ColorTranslator.FromHtml("#FF0941");
+        private readonly Color accentColor = ColorTranslator.FromHtml("#000000");
 
         public Main()
         {
@@ -79,28 +79,28 @@ namespace cocina
             {
                 dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
                 {
-                    HeaderText = "Nº PEDIDO",
+                    HeaderText = "Eskaera Zenbakia",
                     DataPropertyName = "Mesa",
                     ReadOnly = true
                 });
 
                 dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
                 {
-                    HeaderText = "PLATO",
+                    HeaderText = "Platera",
                     DataPropertyName = "NombrePlato",
                     ReadOnly = true
                 });
 
                 dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
                 {
-                    HeaderText = "NOTA",
+                    HeaderText = "Oharrak",
                     DataPropertyName = "Nota",
                     ReadOnly = false
                 });
 
                 var preparandocolumn = new DataGridViewCheckBoxColumn
                 {
-                    HeaderText = "PREPARADO",
+                    HeaderText = "Prestatzen",
                     DataPropertyName = "Preparando",
                     Name = "egoera",
                     ReadOnly = false,
@@ -110,7 +110,7 @@ namespace cocina
 
                 var donecolumn = new DataGridViewCheckBoxColumn
                 {
-                    HeaderText = "ENTREGADO",
+                    HeaderText = "Entregatuta",
                     DataPropertyName = "Done",
                     Name = "done",
                     ReadOnly = false,
@@ -254,8 +254,8 @@ namespace cocina
 
         public class CustomDataGridViewCheckBoxCell : DataGridViewCheckBoxCell
         {
-            private readonly Color checkBoxFillColor = ColorTranslator.FromHtml("#091725");
-            private readonly Color checkBoxTickColor = ColorTranslator.FromHtml("#ececec");
+            private readonly Color checkBoxFillColor = ColorTranslator.FromHtml("#F6F0E4");
+            private readonly Color checkBoxTickColor = ColorTranslator.FromHtml("#091725");
 
             protected override void Paint(Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates elementState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
             {
@@ -316,6 +316,10 @@ namespace cocina
                     }
                 }
             }
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close(); // Cierra el formulario actual
         }
     }
 }
